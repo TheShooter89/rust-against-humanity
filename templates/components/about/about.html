@@ -1,0 +1,31 @@
+{% extends "../layout/base.html" %}
+
+{% block title %}
+  {% if let Some(title) = title %}
+    {{ title }}
+  {% endif %}
+{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="/static/css/pages/about.css">
+{% endblock %}
+
+{% block body%}
+    <section class="columns mt-0 mb-0 is-centered is-vcentered about_body">
+      <div class="column pt-0 pb-0 is-half about_column">
+        <div class="mb-0 about_column_title">
+          <div class="is-flex mb-5 is-justify-content-center">
+            <section class="notification">
+              <h2 class="title is-3">Under the hood</h2>
+            </section>
+          </div>
+        </div>
+
+        <div class="columns mb-0 mt-3 about_column_content">
+          <div class="column p-0">
+            {% include "../../content/about_page.html" %}
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

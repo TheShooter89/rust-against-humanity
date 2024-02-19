@@ -1,0 +1,49 @@
+<div class="box home_prompt_box">
+  <div class="home_prompt_box_container">
+    <!-- QRcode row -->
+    <div class="home_prompt_box_top">
+      <article class="message is-success">
+        <div class="message-header">
+          <div class="container">
+            <p class="theme-title">SCAN BELOW QR CODE TO OPEN ON YOUR PHONE</p>
+          </div>
+        </div>
+
+        <div class="message-body">
+          <figure class="image">
+            <img src="static/img/qrcode_link.png" />
+          </figure>
+        </div>
+      </article>
+    </div>
+
+    <div class="home_prompt_box_bottom">
+      <!-- prompt row -->
+      <form class="mt-3">
+        <div class="field">
+          <label class="label theme-title">TRANSFORM IMAGE:</label>
+          <div class="controls">
+            <input class="input" type="text" name="user_prompt" placeholder="Enter your prompt here...">
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="controls">
+            <div class="level">
+              <div class="level-left">
+                <button class="button is-warning theme-button" type="submit" value="image_edit">EDIT</button>
+              </div>
+
+              <div class="level-right">
+                <button class="button is-danger theme-button" type="submit" value="image_new">NEW IMAGE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      {% if let Some(message) = message %}
+      <p><span><strong>{{ message }}</strong></span></p>
+      {% endif %}
+    </div>
+  </div>
+</div>
