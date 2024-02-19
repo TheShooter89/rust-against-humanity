@@ -9,10 +9,14 @@ small web-app clone of Cards Against Humanity card game
 
 clone this repo and `cd` into it and use `cargo run` to run it
 
-create a crate for each day using cargo
+```bash
+RUST_ENV=debug cargo run
+```
+
+alternatively, if on Linux, you can use `make` to run it
 
 ```bash
-cargo run
+make run
 ```
 
 ## Build client Typescript code
