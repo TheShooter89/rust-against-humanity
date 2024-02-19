@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../client/main.ts"],
-  "sourcesContent": ["console.log(\"Hello from main.ts ran on client side\");\n\n"],
-  "mappings": "mBAAA,QAAQ,IAAI,uCAAuC",
-  "names": []
+  "sourcesContent": ["console.log(\"Hello from main.ts ran on client side\");\n\nconst ToggleMenu = (e: Event) => {\n  e.preventDefault();\n\n  console.log(\"burger button pressed! fuck yeah!\");\n\n  const topbar_menu = document.getElementById(\"navbarBasicExample\");\n  topbar_menu?.classList.toggle(\"is-active\");\n};\n\nconst burger_button = document.getElementById(\"topbar-menu\");\nconsole.log(burger_button);\n\n\nburger_button?.addEventListener(\"click\", ToggleMenu);\n\n"],
+  "mappings": "mBAAA,QAAQ,IAAI,uCAAuC,EAEnD,IAAMA,EAAcC,GAAa,CAC/BA,EAAE,eAAe,EAEjB,QAAQ,IAAI,mCAAmC,EAE/C,IAAMC,EAAc,SAAS,eAAe,oBAAoB,EAChEA,GAAA,MAAAA,EAAa,UAAU,OAAO,YAChC,EAEMC,EAAgB,SAAS,eAAe,aAAa,EAC3D,QAAQ,IAAIA,CAAa,EAGzBA,GAAA,MAAAA,EAAe,iBAAiB,QAASH",
+  "names": ["ToggleMenu", "e", "topbar_menu", "burger_button"]
 }
