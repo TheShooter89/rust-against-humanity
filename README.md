@@ -16,6 +16,8 @@ RUST_ENV=debug cargo run
 alternatively, if on Linux, you can use `make` to run it
 
 ```bash
+make install
+
 make run
 ```
 
