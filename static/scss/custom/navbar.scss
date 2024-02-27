@@ -5,11 +5,17 @@ nav {
   padding: 12px 20px;
   display: flex;
   align-items: center;
+
   // setting z-index to expand
   // menus over the body
   position: absolute;
   width: 100%;
   z-index: 900;
+
+  // set bottom border to solid white
+  // so to make it visible against body
+  // black background
+  border-bottom: 0.5em solid #fff;
 }
 
 nav a, nav p {
@@ -75,6 +81,11 @@ nav a:hover {
   display: block;
   background-color: #222;
   border-radius: 3px;
+
+  // add bottom solid whit border
+  // to distinguish it from backgorund
+  // border-bottom: 0.5em solid #fff;
+  // padding-bottom: 0.3em;
 }
 
 .topbar-menu-active .topbar-menu-item {
@@ -161,6 +172,13 @@ nav a:hover {
     top: 100%;
     right: 0;
     background: #111;
+  }
+
+  .topbar-menu .topbar-menu-active {
+    // add bottom solid whit border
+    // to distinguish it from backgorund
+    border-bottom: 0.5em solid #fff;
+    padding-bottom: 0.3em;
   }
 
   .toggle {

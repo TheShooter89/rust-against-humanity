@@ -10290,6 +10290,7 @@ nav {
   position: absolute;
   width: 100%;
   z-index: 900;
+  border-bottom: 0.5em solid #fff;
 }
 
 nav a, nav p {
@@ -10434,6 +10435,10 @@ nav a:hover {
     top: 100%;
     right: 0;
     background: #111;
+  }
+  .topbar-menu .topbar-menu-active {
+    border-bottom: 0.5em solid #fff;
+    padding-bottom: 0.3em;
   }
   .toggle {
     display: none;
