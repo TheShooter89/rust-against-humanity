@@ -12,9 +12,10 @@ use crate::users::{AuthSession, Credentials};
 
 #[derive(Template)]
 #[template(path = "components/login/login.html")]
-pub struct LoginTemplate {
+pub struct LoginTemplate<'a> {
     is_logged: bool,
     title: Option<String>,
+    username: &'a str,
     message: Option<String>,
     next: Option<String>,
 }
@@ -45,6 +46,7 @@ mod post {
             Ok(None) => {
                 return LoginTemplate {
                     is_logged: false,
+                    username: "Pippo",
                     message: Some("Invalid credentials.".to_string()),
                     title: Some("Error Login".to_string()),
                     next: creds.next,
@@ -69,13 +71,15 @@ mod post {
 mod get {
     use super::*;
 
-    pub async fn login(Query(NextUrl { next }): Query<NextUrl>) -> LoginTemplate {
+    pub async fn login(Query(NextUrl { next }): Query<NextUrl>) -> impl IntoResponse {
         LoginTemplate {
             is_logged: false,
+            username: "Pippo",
             title: Some("Login page - official".to_string()),
             message: None,
             next,
         }
+        .into_response()
     }
 
     pub async fn logout(mut auth_session: AuthSession) -> impl IntoResponse {

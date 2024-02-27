@@ -4,4 +4,209 @@ $family-primary: "Helvetica Neue W02 75 Bold";
 $family-secondary: "Oswald";
 
 @import "../bulma-0.9.4/bulma/bulma.sass";
-// @import "./bulma-0.9.4/bulma/bulma.sass";
+
+$purple_flat: #ad0afd;
+
+nav {
+  background: #222;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav a:hover {
+  color: $purple_flat;
+}
+
+.topbar, .topbar-menu {
+  list-style-type: none;
+}
+
+/* mobile menu */
+.topbar {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar li a {
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  order: 1;
+}
+
+.item.button {
+  order: 2;
+}
+
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+  margin-bottom: 0.8em;
+}
+
+.first-item {
+  margin-top: 2em;
+}
+
+.active .item {
+  display: block;
+}
+
+.topbar-menu {
+  display: none;
+}
+
+.topbar-menu-active .item {
+  display: block;
+}
+
+.has-menu i {
+  font-size: 12px;
+}
+
+.has-menu > a.topbar-menu-title::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+
+.topbar-menu-active {
+  background-color: grey;
+  border-radius: 3px;
+}
+
+.logo a {
+  font-size: 20px; }
+
+.logo a:hover {
+  color: #fff;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+// Desktop Menu
+
+@media all and (min-width: 768px) {
+  .topbar {
+    align-items: center;
+    flex-wrap: nowrap;
+    background: none;
+  }
+
+  .logo {
+    flex: 1;
+    order: 0;
+  }
+
+  .item {
+    order: 1;
+    position: relative;
+    display: block;
+    width: auto;
+    margin: 0;
+    margin-left: 0.8em;
+  }
+
+  .first-item {
+    margin: 0;
+  }
+
+  .button {
+    order: 2;
+  }
+
+  .topbar-menu .topbar-menu-active {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 68px;
+    background: #111;
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  .topbar-menu-active {
+    border-radius: 0;
+  }
+}
+
+/* OLD STYLES */
+//
+//
+// .logo {
+//   flex: 1;
+// }
+//
+// .logo a {
+//   display: flex;
+//   align-items: center;
+//   font-size: 20px; }
+//
+// .logo a:hover {
+//   color: #fff;
+// }
+//
+// .logo img {
+//   width: 40px;
+//   margin-right: 10px;
+// }
+//
+// .menu {
+//   display: flex;
+//   align-items: center;
+// }
+//
+// .menu li {
+//   padding: 15px 10px;
+//   font-size: 16px;
+// }
+//
+// .toggle {
+//   font-size: 30px;
+//   display: none;
+// }
+//
+// @media screen and (max-width: 768px) {
+//   nav.topbar, nav.topbar.logo {
+//     display: flex;
+//     padding: 15px 20px;
+//     flex-direction: column;
+//   }
+//
+//   .menu {
+//     margin-top: 15px;
+//     display: none;
+//   }
+//
+//   .menu.active {
+//     display: block;
+//   }
+//   .toggle {
+//     display: flex;
+//   }
+//
+//   .toggle a {
+//     display: flex;
+//   }
+// }
