@@ -12,9 +12,14 @@ nav {
   padding: 12px 20px;
   display: flex;
   align-items: center;
+  // setting z-index to expand
+  // menus over the body
+  position: absolute;
+  width: 100%;
+  z-index: 900;
 }
 
-nav a {
+nav a, nav p {
   color: #fff;
 }
 
@@ -36,6 +41,11 @@ nav a:hover {
 }
 
 .topbar li a {
+  display: flex;
+  align-items: center;
+}
+
+.topbar li p {
   display: flex;
   align-items: center;
 }
@@ -68,8 +78,18 @@ nav a:hover {
   display: none;
 }
 
-.topbar-menu-active .item {
+.topbar-menu-active {
   display: block;
+  background-color: #222;
+  border-radius: 3px;
+}
+
+.topbar-menu-active .topbar-menu-item {
+  display: block;
+}
+
+.topbar-menu-title-active {
+  margin-bottom: 0.8em;
 }
 
 .has-menu i {
@@ -86,9 +106,14 @@ nav a:hover {
   padding-left: 5px;
 }
 
-.topbar-menu-active {
-  background-color: grey;
-  border-radius: 3px;
+.has-menu > a.topbar-menu-title-active::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f053";
+  color: white;
+  padding-left: 5px;
 }
 
 .logo a {
@@ -126,6 +151,10 @@ nav a:hover {
     margin-left: 0.8em;
   }
 
+  .item .has-menu {
+    flex-direction: column;
+  }
+
   .first-item {
     margin: 0;
   }
@@ -134,11 +163,10 @@ nav a:hover {
     order: 2;
   }
 
-  .topbar-menu .topbar-menu-active {
-    display: block;
+  .topbar-menu {
     position: absolute;
-    left: 0;
-    top: 68px;
+    top: 100%;
+    right: 0;
     background: #111;
   }
 
@@ -149,64 +177,8 @@ nav a:hover {
   .topbar-menu-active {
     border-radius: 0;
   }
-}
 
-/* OLD STYLES */
-//
-//
-// .logo {
-//   flex: 1;
-// }
-//
-// .logo a {
-//   display: flex;
-//   align-items: center;
-//   font-size: 20px; }
-//
-// .logo a:hover {
-//   color: #fff;
-// }
-//
-// .logo img {
-//   width: 40px;
-//   margin-right: 10px;
-// }
-//
-// .menu {
-//   display: flex;
-//   align-items: center;
-// }
-//
-// .menu li {
-//   padding: 15px 10px;
-//   font-size: 16px;
-// }
-//
-// .toggle {
-//   font-size: 30px;
-//   display: none;
-// }
-//
-// @media screen and (max-width: 768px) {
-//   nav.topbar, nav.topbar.logo {
-//     display: flex;
-//     padding: 15px 20px;
-//     flex-direction: column;
-//   }
-//
-//   .menu {
-//     margin-top: 15px;
-//     display: none;
-//   }
-//
-//   .menu.active {
-//     display: block;
-//   }
-//   .toggle {
-//     display: flex;
-//   }
-//
-//   .toggle a {
-//     display: flex;
-//   }
-// }
+  .topbar-menu-title-active {
+    margin-bottom: 0;
+  }
+}

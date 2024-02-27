@@ -10287,9 +10287,12 @@ nav {
   padding: 12px 20px;
   display: flex;
   align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 900;
 }
 
-nav a {
+nav a, nav p {
   color: #fff;
 }
 
@@ -10311,6 +10314,11 @@ nav a:hover {
 }
 
 .topbar li a {
+  display: flex;
+  align-items: center;
+}
+
+.topbar li p {
   display: flex;
   align-items: center;
 }
@@ -10343,8 +10351,18 @@ nav a:hover {
   display: none;
 }
 
-.topbar-menu-active .item {
+.topbar-menu-active {
   display: block;
+  background-color: #222;
+  border-radius: 3px;
+}
+
+.topbar-menu-active .topbar-menu-item {
+  display: block;
+}
+
+.topbar-menu-title-active {
+  margin-bottom: 0.8em;
 }
 
 .has-menu i {
@@ -10361,9 +10379,14 @@ nav a:hover {
   padding-left: 5px;
 }
 
-.topbar-menu-active {
-  background-color: grey;
-  border-radius: 3px;
+.has-menu > a.topbar-menu-title-active::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f053";
+  color: white;
+  padding-left: 5px;
 }
 
 .logo a {
@@ -10397,17 +10420,19 @@ nav a:hover {
     margin: 0;
     margin-left: 0.8em;
   }
+  .item .has-menu {
+    flex-direction: column;
+  }
   .first-item {
     margin: 0;
   }
   .button {
     order: 2;
   }
-  .topbar-menu .topbar-menu-active {
-    display: block;
+  .topbar-menu {
     position: absolute;
-    left: 0;
-    top: 68px;
+    top: 100%;
+    right: 0;
     background: #111;
   }
   .toggle {
@@ -10416,5 +10441,7 @@ nav a:hover {
   .topbar-menu-active {
     border-radius: 0;
   }
+  .topbar-menu-title-active {
+    margin-bottom: 0;
+  }
 }
-/* OLD STYLES */
