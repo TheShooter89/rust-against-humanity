@@ -10,3 +10,7 @@ $family-secondary: "Oswald";
 
 // import body styles
 @import 'body.scss';
+
+html {
+  overflow: hidden;
+}

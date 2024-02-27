@@ -1,0 +1,13 @@
+@import 'navbar.scss';
+
+@debug $nav-height-total;
+
+$body-section-top: $nav-height-total + $nav-menu-border;
+
+.body-section {
+  position: absolute;
+  background-color: #000;
+  top: $body-section-top;
+  height: calc(100vh - #{$body-section-top});
+  width: 100vw;
+}

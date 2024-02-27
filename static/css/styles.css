@@ -10283,14 +10283,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 nav {
-  background: #222;
+  background: #000;
   padding: 0.8em 1.2em;
   display: flex;
   align-items: center;
   position: absolute;
   width: 100%;
   z-index: 900;
-  border-bottom: 0.5em solid #fff;
+  border-bottom: 0 solid #fff;
 }
 
 nav a, nav p {
@@ -10451,14 +10451,14 @@ nav a:hover {
   }
 }
 nav {
-  background: #222;
+  background: #000;
   padding: 0.8em 1.2em;
   display: flex;
   align-items: center;
   position: absolute;
   width: 100%;
   z-index: 900;
-  border-bottom: 0.5em solid #fff;
+  border-bottom: 0 solid #fff;
 }
 
 nav a, nav p {
@@ -10617,4 +10617,15 @@ nav a:hover {
   .topbar-menu-title-active {
     margin-bottom: 0;
   }
+}
+.body-section {
+  position: absolute;
+  background-color: #000;
+  top: 4em;
+  height: calc(100vh - 4em);
+  width: 100vw;
+}
+
+html {
+  overflow: hidden;
 }

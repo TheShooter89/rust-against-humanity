@@ -1,31 +1,12 @@
-$purple_flat: #ad0afd;
-$nav-height: 2em;
-$nav-padding: 0.8em;
-$nav-horizontal-padding: 1.2em;
-// $nav-border: 0.5em;
-$nav-border: 0;
-$nav-menu-border: 0.4em;
-$nav-font-size: 1em;
-$nav-font-size-big: 1.25em;
-
-$nav-height-total: $nav-padding + $nav-height + $nav-padding + $nav-border;
-
 nav {
   background: #000;
-  padding: $nav-padding $nav-horizontal-padding;
+  padding: 0.8em 1.2em;
   display: flex;
   align-items: center;
-
-  // setting z-index to expand
-  // menus over the body
   position: absolute;
   width: 100%;
   z-index: 900;
-
-  // set bottom border to solid white
-  // so to make it visible against body
-  // black background
-  border-bottom: $nav-border solid #fff;
+  border-bottom: 0 solid #fff;
 }
 
 nav a, nav p {
@@ -33,7 +14,7 @@ nav a, nav p {
 }
 
 nav a:hover {
-  color: $purple_flat;
+  color: #ad0afd;
 }
 
 .topbar, .topbar-menu {
@@ -91,11 +72,6 @@ nav a:hover {
   display: block;
   background-color: #222;
   border-radius: 3px;
-
-  // add bottom solid whit border
-  // to distinguish it from backgorund
-  // border-bottom: 0.5em solid #fff;
-  // padding-bottom: 0.3em;
 }
 
 .topbar-menu-active .topbar-menu-item {
@@ -107,12 +83,12 @@ nav a:hover {
 }
 
 .has-menu i {
-  font-size: $nav-font-size;
+  font-size: 1em;
 }
 
 .has-menu > a.topbar-menu-title::after {
   font-family: "Font Awesome 5 Free";
-  font-size: $nav-font-size;
+  font-size: 1em;
   line-height: 16px;
   font-weight: 900;
   content: "\f078";
@@ -122,7 +98,7 @@ nav a:hover {
 
 .has-menu > a.topbar-menu-title-active::after {
   font-family: "Font Awesome 5 Free";
-  font-size: $nav-font-size;
+  font-size: 1em;
   line-height: 16px;
   font-weight: 900;
   content: "\f053";
@@ -131,18 +107,17 @@ nav a:hover {
 }
 
 .logo a {
-  font-size: $nav-font-size-big; }
+  font-size: 1.25em;
+}
 
 .logo a:hover {
   color: #fff;
 }
 
 .logo img {
-  width: $nav-height;
+  width: 2em;
   margin-right: 10px;
 }
-
-// Desktop Menu
 
 @media all and (min-width: 768px) {
   .topbar {
@@ -150,12 +125,10 @@ nav a:hover {
     flex-wrap: nowrap;
     background: none;
   }
-
   .logo {
     flex: 1;
     order: 0;
   }
-
   .item {
     order: 1;
     position: relative;
@@ -164,42 +137,39 @@ nav a:hover {
     margin: 0;
     margin-left: 0.8em;
   }
-
   .item .has-menu {
     flex-direction: column;
   }
-
   .first-item {
     margin: 0;
   }
-
   .button {
     order: 2;
   }
-
   .topbar-menu {
     position: absolute;
     top: 100%;
     right: 0;
     background: #111;
   }
-
   .topbar-menu .topbar-menu-active {
-    // add bottom solid whit border
-    // to distinguish it from backgorund
-    border-bottom: $nav-menu-border solid #fff;
+    border-bottom: 0.4em solid #fff;
     padding-bottom: 0.3em;
   }
-
   .toggle {
     display: none;
   }
-
   .topbar-menu-active {
     border-radius: 0;
   }
-
   .topbar-menu-title-active {
     margin-bottom: 0;
   }
+}
+.body-section {
+  position: absolute;
+  background-color: #000;
+  top: 4em;
+  height: calc(100vh - 4em);
+  width: 100vw;
 }
