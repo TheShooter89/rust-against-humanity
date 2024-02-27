@@ -1,8 +1,17 @@
 $purple_flat: #ad0afd;
+$nav-height: 2em;
+$nav-padding: 0.8em;
+$nav-horizontal-padding: 1.2em;
+$nav-border: 0.5em;
+$nav-menu-border: 0.4em;
+$nav-font-size: 1em;
+$nav-font-size-big: 1.25em;
+
+$nav-height-total: $nav-height + $nav-padding + $nav-border;
 
 nav {
   background: #222;
-  padding: 12px 20px;
+  padding: $nav-padding $nav-horizontal-padding;
   display: flex;
   align-items: center;
 
@@ -15,7 +24,7 @@ nav {
   // set bottom border to solid white
   // so to make it visible against body
   // black background
-  border-bottom: 0.5em solid #fff;
+  border-bottom: $nav-border solid #fff;
 }
 
 nav a, nav p {
@@ -97,12 +106,12 @@ nav a:hover {
 }
 
 .has-menu i {
-  font-size: 12px;
+  font-size: $nav-font-size;
 }
 
 .has-menu > a.topbar-menu-title::after {
   font-family: "Font Awesome 5 Free";
-  font-size: 12px;
+  font-size: $nav-font-size;
   line-height: 16px;
   font-weight: 900;
   content: "\f078";
@@ -112,7 +121,7 @@ nav a:hover {
 
 .has-menu > a.topbar-menu-title-active::after {
   font-family: "Font Awesome 5 Free";
-  font-size: 12px;
+  font-size: $nav-font-size;
   line-height: 16px;
   font-weight: 900;
   content: "\f053";
@@ -121,14 +130,14 @@ nav a:hover {
 }
 
 .logo a {
-  font-size: 20px; }
+  font-size: $nav-font-size-big; }
 
 .logo a:hover {
   color: #fff;
 }
 
 .logo img {
-  width: 40px;
+  width: $nav-height;
   margin-right: 10px;
 }
 
@@ -177,7 +186,7 @@ nav a:hover {
   .topbar-menu .topbar-menu-active {
     // add bottom solid whit border
     // to distinguish it from backgorund
-    border-bottom: 0.5em solid #fff;
+    border-bottom: $nav-menu-border solid #fff;
     padding-bottom: 0.3em;
   }
 
