@@ -10290,7 +10290,6 @@ nav {
   position: absolute;
   width: 100%;
   z-index: 900;
-  border-bottom: 0 solid #fff;
 }
 
 nav a, nav p {
@@ -10354,8 +10353,8 @@ nav a:hover {
 
 .topbar-menu-active {
   display: block;
-  background-color: #222;
-  border-radius: 3px;
+  background-color: #000;
+  padding-bottom: 0.8em;
 }
 
 .topbar-menu-active .topbar-menu-item {
@@ -10435,10 +10434,6 @@ nav a:hover {
     top: 100%;
     right: 0;
     background: #111;
-  }
-  .topbar-menu .topbar-menu-active {
-    border-bottom: 0.4em solid #fff;
-    padding-bottom: 0.3em;
   }
   .toggle {
     display: none;
@@ -10458,7 +10453,6 @@ nav {
   position: absolute;
   width: 100%;
   z-index: 900;
-  border-bottom: 0 solid #fff;
 }
 
 nav a, nav p {
@@ -10522,8 +10516,8 @@ nav a:hover {
 
 .topbar-menu-active {
   display: block;
-  background-color: #222;
-  border-radius: 3px;
+  background-color: #000;
+  padding-bottom: 0.8em;
 }
 
 .topbar-menu-active .topbar-menu-item {
@@ -10603,10 +10597,6 @@ nav a:hover {
     top: 100%;
     right: 0;
     background: #111;
-  }
-  .topbar-menu .topbar-menu-active {
-    border-bottom: 0.4em solid #fff;
-    padding-bottom: 0.3em;
   }
   .toggle {
     display: none;

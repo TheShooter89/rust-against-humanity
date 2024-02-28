@@ -25,7 +25,7 @@ nav {
   // set bottom border to solid white
   // so to make it visible against body
   // black background
-  border-bottom: $nav-border solid #fff;
+  // border-bottom: $nav-border solid #fff;
 }
 
 nav a, nav p {
@@ -89,13 +89,12 @@ nav a:hover {
 
 .topbar-menu-active {
   display: block;
-  background-color: #222;
-  border-radius: 3px;
+  background-color: #000;
 
   // add bottom solid whit border
   // to distinguish it from backgorund
-  // border-bottom: 0.5em solid #fff;
-  // padding-bottom: 0.3em;
+  // border-bottom: $nav-menu-border solid #fff;
+  padding-bottom: $nav-padding;
 }
 
 .topbar-menu-active .topbar-menu-item {
@@ -182,13 +181,6 @@ nav a:hover {
     top: 100%;
     right: 0;
     background: #111;
-  }
-
-  .topbar-menu .topbar-menu-active {
-    // add bottom solid whit border
-    // to distinguish it from backgorund
-    border-bottom: $nav-menu-border solid #fff;
-    padding-bottom: 0.3em;
   }
 
   .toggle {
